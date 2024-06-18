@@ -1,0 +1,84 @@
+/* Algemene opmaak voor de hele pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(./img/sneakerbg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Stijl voor de titel met fade-in animatie */
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Stijl voor de tabel met fade-in animatie */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Verberg de tabel aanvankelijk */
+    animation: fadeIn 1s 0.5s ease-in-out forwards;
+}
+
+/* Stijl voor tabelkoppen */
+table th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Stijl voor tabelcellen */
+table td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Stijl voor rijen afwisselend kleuren */
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Stijl voor de "Verwijder" knop met schaalvergroting animatie */
+table td a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Stijl voor de "Verwijder" knop bij hover */
+table td a:hover {
+    text-decoration: underline;
+    transform: scale(1);
+}
+
+/* Voeg hier je eigen stijlen toe om de pagina verder aan te passen */
+
+/* Animaties */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
